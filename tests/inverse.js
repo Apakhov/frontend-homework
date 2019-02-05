@@ -1,5 +1,13 @@
 'use strict';
 
+const createBigArray = (s, e) => {
+	let xs = [];
+	for(let i = s; i < e; i++){
+		xs.push(i);
+	}
+	return xs
+}
+
 QUnit.module('Тестируем функцию inverse', function () {
 	QUnit.test('Функция работает с пустым массивом', function (assert) {
 		assert.deepEqual(inverse([]), []);
@@ -33,6 +41,8 @@ QUnit.module('Тестируем функцию inverse', function () {
 		assert.deepEqual(inverse([1, 2, 3, 4, 5], -5), [1, 2, 3, 4, 5]);
 		assert.deepEqual(inverse([1, 2, 3, 4, 5], -15), [1, 2, 3, 4, 5]);
 	});
+
+
 
 	QUnit.test('Функция работает на больших данных', function (assert) {
 		assert.deepEqual(inverse(createBigArray(0, 1000000)), createBigArray(0, 1000000).reverse())
