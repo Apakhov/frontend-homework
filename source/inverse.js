@@ -1,9 +1,9 @@
 'use strict';
 
 /** inverses array
- *  @param {any[]}   arr    Array of any type
+ *  @param {!any[]}   arr    Array of any type
  *  @param {!number} shift  Number of elements from begin (end if negative) that shoud not be affected
- *  @returns {any[]}        Result array
+ *  @returns {!any[]}        Result array
  */
 const inverse = (arr, shift = 0) => {
     let l = Math.max(0, shift);
@@ -17,9 +17,9 @@ const inverse = (arr, shift = 0) => {
 };
 
 /** inverses array
- *  @param {any[]}   arr    Array of any type
+ *  @param {!any[]}   arr    Array of any type
  *  @param {!number} shift  Number of elements from begin (end if negative) that shoud not be affected
- *  @returns {any[]}        Result array
+ *  @returns {!any[]}        Result array
  */
 const inverse2 = (arr, shift = 0) =>
     (function (l, r) {
