@@ -9,9 +9,7 @@ const inverse = (arr, shift = 0) => {
     let l = Math.max(0, shift);
     let r = arr.length - 1 + Math.min(0, shift);
     for (; l < r; l++, r--) {
-        const temp = arr[l];
-        arr[l] = arr[r];
-        arr[r] = temp;
+        [arr[l], arr[r]] = [arr[r], arr[l]];
     }
     return arr;
 };
