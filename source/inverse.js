@@ -5,7 +5,8 @@
  *  @param {!number} shift  Number of elements from begin (end if negative) that shoud not be affected
  *  @returns {!any[]}        Result array
  */
-const inverse = (arr, shift = 0) => {
+const inverse = (old_arr, shift = 0) => {
+    let arr = old_arr.slice()
     let l = Math.max(0, shift);
     let r = arr.length - 1 + Math.min(0, shift);
     for (; l < r; l++, r--) {
